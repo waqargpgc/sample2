@@ -1,0 +1,14 @@
+AOA, my skills in Client Side are HTML5,CSS3,JAVASCRIPT,JQUERY,BOOTSTRAP,ANGULAR 2 and also Server Side are C#,ASP.NET CORE and SQL SERVER.I like to improve and learn more about these task...
+
+
+https://waqargpgc.github.io/recuitment
+
+
+
+git clone https://github.com/angular/quickstart.git quickstart
+cd quickstart
+npm install
+npm start
+
+
+echo yes | android extra-android-support --all --no-ui

@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+<style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .page-1,
+    .page-2,
+    .page-3,
+    .page-4 {
+        width: 100%;
+    }
+    
+    .page-1 {
+        background-image: url(assets/images/jumbotron.jpg);
+        background-origin: border-box;
+        background-position: center;
+        background-clip: border-box;
+        background-size: cover;
+    }
+    
+    .mbr-section-title span {
+        color: #f8198d;
+    }
+    
+    .main-cursor {
+        opacity: 1;
+        animation: blink .6s infinite;
+    }
+    
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+        50% {
+            opacity: 1;
+        }
+        50.01% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    
+    #search-box {
+        position: relative;
+        width: 100%;
+        margin: 10px 0 40px 0;
+    }
+    
+    #search-form {
+        height: 45px;
+        border: 1px solid #999;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        border-radius: 7px;
+        background-color: #fff;
+        overflow: hidden;
+    }
+    
+    #search-text {
+        font-size: 14px;
+        color: #ddd;
+        border-width: 0;
+        background: transparent;
+    }
+    
+    #search-box input[type="text"] {
+        width: 90%;
+        padding: 11px 0 12px 1em;
+        color: #333;
+        outline: none;
+    }
+    
+    #search-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 46px;
+        width: 120px;
+        font-size: 14px;
+        color: #fff;
+        text-align: center;
+        line-height: 42px;
+        border-width: 0;
+        background-color: #4d90fe;
+        -webkit-border-radius: 0px 6px 6px 0px;
+        -moz-border-radius: 0px 6px 6px 0px;
+        border-radius: 0px 6px 6px 0px;
+        cursor: pointer;
+    }
+    
+    .page-2 {}
+    
+    .jswelcom-page h1 {
+        padding: 80px 0;
+        font-size: 2em;
+    }
+    
+    .jswelcom-page .round {
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+        border: 2px solid gray;
+        border-radius: 100%;
+        font-size: 2.5em;
+        margin-bottom: 50px;
+        color: green;
+        background: rgba(0, 0, 0, .05);
+        text-align: center;
+    }
+    
+    .jswelcom-page .links {
+        margin: 30px 0 100px 0;
+        text-align: center;
+    }
+    
+    .page-3 {
+        background: ;
+    }
+    
+    .page-4 {
+        height: 100%;
+        background-image: url(assets/images/coworkers.jpg);
+        background-size: cover;
+    }
+    /*---------------- style for input, fields, divs, icons and heading---------------------*/
+    
+    .r-form {
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+    
+    .r-form h4 {
+        border-bottom: 1px solid gray;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 1em;
+    }
+    
+    .r-form label,
+    h4 {
+        font-family: "Pompiere", "Helvetica Neue", sans-serif;
+    }
+    
+    .r-form input {
+        font-size: 1em;
+        width: 97%;
+        height: 36px;
+        font-family: arial;
+        border: 1px solid gray;
+        border-radius: 5px;
+        margin: 10px 0;
+        box-shadow: inset 2px 3px 23px rgba(0, 0, 0, .1);
+        padding: 0 0 0 30px;
+    }
+    
+    .r-form input:focus {
+        outline: none;
+    }
+    
+    .r-form p a {
+        margin: auto;
+    }
+    
+    .feld span {
+        position: absolute;
+        margin-left: 2%;
+        margin-top: -40px;
+    }
+    
+    .feld .ph {
+        position: absolute;
+        margin-left: -27.5%;
+        margin-top: -40px;
+    }
+    /*---------------- style for input, fields, divs, icons and heading---------------------*/
+    /* ---------------------sical icon style------------------------*/
+    /*----------------gerneral style zocial icons---------------------*/
+    
+    .zocial {
+        width: 97%;
+        height: 36px;
+        line-height: 36px;
+        color: #fff;
+        font-family: "Lucida Grande", Tahoma, sans-serif;
+        font-size: .9em;
+        position: relative;
+        text-decoration: none;
+        text-shadow: 0 0.6px 0 rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        text-align: center;
+        margin: 3px 0;
+    }
+    /*---------------- put text in zocial icons through css ---------------------*/
+    
+    .zocial.facebook>span:before {
+        content: "F";
+    }
+    
+    .zocial.twitter>span:before {
+        content: "T";
+    }
+    
+    .zocial.google>span:before {
+        content: "G";
+    }
+    
+    .zocial.linkedin>span:before {
+        content: "L";
+    }
+    
+    .zocial>span:before {
+        border-right: 0.075em solid rgba(0, 0, 0, 0.1);
+        box-shadow: 0.075em 0 0 rgba(255, 255, 255, 0.25);
+        content: "";
+        display: block;
+        float: left;
+        font-size: 1.25em;
+        margin: 0.1em 0.5em 0 0;
+        text-align: center !important;
+        padding: 0 0.5em;
+    }
+    
+    .zocial>span {
+        font-size: 80%;
+        font-weight: bold;
+        padding: 0em 1em 0 0;
+    }
+    
+    .zocial,
+    .zocial>span {
+        border-radius: 0.4em;
+    }
+    /*---------------- zocial icons in anchr tag---------------------*/
+    
+    .zocial a {
+        width: 20%;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+    }
+    /*---------------- zocial icons background-color ---------------------*/
+    
+    .zocial.facebook {
+        background: #4863AE;
+    }
+    
+    .zocial.linkedin {
+        background: #0083A8;
+    }
+    
+    .zocial.twitter {
+        background: #46C0FB;
+    }
+    
+    .zocial.google {
+        background: rgba(255, 0, 0, .6);
+    }
+    /* ---------------------sical icon style------------------------*/
+    
+    @media screen and (min-width:100px) and (max-width: 499px) {
+        .r-form input {
+            width: 80%;
+        }
+        .r-form {
+            width: 100%;
+        }
+        .zocial {
+            width: 80%;
+        }
+        .feld span {
+            position: absolute;
+            margin-left: 5%;
+            margin-top: -36px;
+        }
+        .feld .ph {
+            position: absolute;
+            margin-left: -12%;
+            margin-top: -36px;
+        }
+    }
+    
+    .sign-form {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    
+    .sign-form h4 {
+        border-bottom: 1px solid gray;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 1em;
+    }
+    
+    .sign-form label,
+    h4 {
+        font-family: "Pompiere", "Helvetica Neue", sans-serif;
+    }
+    
+    .sign-form input {
+        font-size: 1em;
+        width: 97%;
+        height: 40px;
+        font-family: arial;
+        border: 1px solid gray;
+        border-radius: 6px;
+        margin: 6px 0;
+        box-shadow: inset 2px 3px 23px rgba(0, 0, 0, .1);
+        padding: 0 0 0 40px;
+    }
+    
+    .sign-form input:focus {
+        outline: none;
+    }
+    
+    .sign-form p a {
+        margin: auto;
+    }
+    
+    .icon {
+        position: absolute;
+        margin-left: 1.5%;
+        margin-top: -36px;
+    }
+    
+    .ph {
+        margin-left: -17%;
+    }
+</style>
+
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="Mobirise v3.9.2, mobirise.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <meta name="description" content="">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/bootstrap-material-design-font/css/material.css">
+    <link rel="stylesheet" href="assets/et-line-font-plugin/style.css">
+    <link rel="stylesheet" href="assets/tether/tether.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/animate.css/animate.min.css">
+    <link rel="stylesheet" href="assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="assets/theme/css/style.css">
+    <link rel="stylesheet" href="assets/main css/css/mbr-additional.css">
+    <link rel="stylesheet" href="assets/main css/css/preload.css">
+
+
+</head>
+
+<body>
+   <div id="loader-wrapper">
+        <div id="loader"></div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+
+    </div>
+    <div class="page-1" id="page-1">
+        <section id="menu-3">
+
+            <nav class="navbar navbar-dropdown bg-color transparent navbar-fixed-top">
+                <div class="container">
+
+                    <div class="mbr-table">
+                        <div class="mbr-table-cell">
+
+                            <div class="navbar-brand">
+                                <a href="#page-1" class="navbar-logo"><img src="assets/images/logo.png"></a>
+                                <a class="navbar-caption" href="#page-1">BRIGHT FUTURE</a>
+                            </div>
+
+                        </div>
+                        <div class="mbr-table-cell">
+
+                            <button class="navbar-toggler pull-xs-right hidden-md-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                                <div class="hamburger-icon"></div>
+                            </button>
+
+                            <ul class="nav-dropdown collapse pull-xs-right nav navbar-nav navbar-toggleable-sm" id="exCollapsingNavbar">
+                                <li class="nav-item "><a class="nav-link link" href="#page-1">HOME</a></li>
+                                <li class="nav-item"><a class="nav-link link" href="#page-2">EMPLOYER</a></li>
+                                <li class="nav-item"><a class="nav-link link" href="#page-3">JOBSEEKER</a></li>
+                                <li class="nav-item"><a class="nav-link link" href="#page-4">RECRUITER</a></li>
+                                <li class="nav-item"><a class="nav-link link" href="#page-5">CONTACT</a></li>
+                                <li class="nav-item"><a class="nav-link link" href="#" data-toggle="modal" data-target="#modal1">LOGIN</a></li>
+                            </ul>
+                            <button hidden="" class="navbar-toggler navbar-close" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                                <div class="close-icon"></div>
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </nav>
+        </section>
+        <section class="mbr-section mbr-section-hero mbr-section-full mbr-parallax-background mbr-section-with-arrow mbr-after-navbar">
+
+
+
+            <div class="mbr-table-cell">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="mbr-section col-md-10 col-md-offset-1 text-xs-center">
+
+                            <h1 class="mbr-section-title text-xs-center display-2">Search Online And <span class="main-element" data-elements="Find Jobs,Post Jobs"></span></h1>
+                            <div id='search-box'>
+                                <form action='/search' id='search-form' method='get' target='_top'>
+                                    <input id='search-text' name='q' placeholder='Search Box' type='text' />
+                                    <button id='search-button' type='submit'><span>Search</span></button>
+                                </form>
+                            </div>
+                            <div class="mbr-section-btn"><a class="btn btn-lg btn-white btn-white-outline" href="#" data-toggle="modal" data-target="#modal1">I Am An Employer
+</a>
+                                <a class="btn btn-lg btn-white btn-white-outline" href="#" data-toggle="modal" data-target="#modal1">I Am A Jobseeker
+</a>
+                                <a class="btn btn-lg btn-white btn-white-outline" href="#" data-toggle="modal" data-target="#modal1">I Am A Recuriter
+
+</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mbr-arrow mbr-arrow-floating" aria-hidden="true"><a href="#page-2"><i class="mbr-arrow-icon"></i></a></div>
+
+        </section>
+    </div>
+    <div class="page-2" id="page-2">
+        <div class="mbr-table">
+            <div class="jswelcom-page container">
+                <!-- main page -->
+                <div class="row">
+                    <!-- row -->
+                    <h1 class="text-xs-center">Post Jobs & Search Resumes Online</h1>
+                    <div class="col-sm-3 text-xs-center">
+                        <span class="round">1</span>
+                        <h3>Post Jobs</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
+                    </div>
+                    <div class="col-sm-3 text-xs-center">
+                        <span class="round">2</span>
+                        <h3>Receive Resumes</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div class="col-sm-3 text-xs-center">
+                        <span class="round">3</span>
+                        <h3>Interviews</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    </div>
+                    <div class="col-sm-3 text-xs-center">
+                        <span class="round">4</span>
+                        <h3 class="">Hire</h3>
+                        <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                        </p>
+                    </div>
+                </div>
+                <!-- row end -->
+                <div class="links">
+                    <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal2" style="padding:12px 120px;">Let's Get Started</a>
+                    <p style="margin:0px 0 5px 0;">
+                        Alrady a Member? &nbsp;<a href="#" data-toggle="modal" data-target="#modal1">Login Here</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-3" id="page-3">
+        <div class="jswelcom-page container">
+            <!-- main page -->
+            <div class="row">
+                <!-- row -->
+                <h1 class="text-xs-center">Create Resumes & Search Jobs Online</h1>
+                <div class="col-sm-3 text-xs-center">
+                    <span class="round">1</span>
+                    <h3>Create Resume</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt. </p>
+                </div>
+                <div class="col-sm-3 text-xs-center">
+                    <span class="round">2</span>
+                    <h3>Apply For Job</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                </div>
+                <div class="col-sm-3 text-xs-center">
+                    <span class="round">3</span>
+                    <h3>Daily Jobs Alerts</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+                </div>
+                <div class="col-sm-3 text-xs-center">
+                    <span class="round">4</span>
+                    <h3 class="text-center">Get Hired</h3>
+                    <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.
+                    </p>
+                </div>
+            </div>
+            <!-- row end -->
+            <div class="links">
+                <a class="btn btn-primary" href="#" data-toggle="modal" data-target="#modal2" style="padding:12px 120px;">Let's Get Started</a>
+                <p style="margin:0px 0 5px 0;">
+                    Alrady a Member? &nbsp;<a href="#" data-toggle="modal" data-target="#modal1">Login Here</a>
+                </p>
+            </div>
+
+        </div>
+        <!-- jobseeker welcom page end -->
+
+    </div>
+
+
+    <div class="modal fade bd-example-modal-sm" id="modal1" id="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content modal-popup">
+                <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+                <div action="" class="r-form popup-form">
+                    <!--  social icons(zocial)-->
+                    <h4> Member Login Here Please</h4>
+                    <a href="#" class="zocial facebook"><span>Sign in with Facebook</span></a>
+                    <a href="#" class="zocial google"><span>Sign in with Google+</span></a>
+                    <a href="#" class="zocial twitter"><span>Sign in with Twitter</span></a>
+                    <a href="#" class="zocial linkedin"><span>Sign in with LinkedIn</span></a>
+                    <h4>---OR---</h4>
+                    <div class="feld">
+                        <!--input fields and image icone in span-->
+                        <from>
+                            <input type="email" email="email" id="email" maxlength="100" placeholder="Plz enter your email" required />
+                            <br>
+                            <span class="icon"><img src="assets/images/u2.png"></span>
+
+                            <input type="password" name="pass" id="pass" maxlength="100" placeholder="Plz enter password" required />
+                            <br>
+                            <span class="ph"><img src="assets/images/p2.png"></span>
+                        </from>
+                        <a class="btn btn-primary" href="login.html">Login</a>
+                        <p>If You Want To Create Account?<br> <a href="#" data-toggle="modal" data-target="#modal2">Sign Up Here</a> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-sm" id="modal2" id="" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content modal-popup">
+                <a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
+                <div action="" class="sign-form popup-form">
+                    <h4>New Member Sign Up Here Please</h4>
+                    <a href="#" class="zocial facebook"><span>Sign in with Facebook</span></a>
+                    <a href="#" class="zocial google"><span>Sign in with Google+</span></a>
+                    <a href="#" class="zocial twitter"><span>Sign in with Twitter</span></a>
+                    <a href="#" class="zocial linkedin"><span>Sign in with LinkedIn</span></a>
+                    <h4>---OR---</h4>
+                    <input type="email" email="email" id="email" maxlength="100" placeholder="Plz enter your email" required /><br>
+                    <span class="icon"><img src="assets/images/m2.png"></span>
+
+                    <input type="password" name="pass" id="pass" maxlength="100" placeholder="Plz enter password" required /><br>
+                    <span class="icon"><img src="assets/images/p2.png"></span>
+
+                    <input type="text" name="name" id="name" maxlength="100" placeholder="Plz enter your first name" required /><br>
+                    <span class="icon"><img src="assets/images/u2.png"></span>
+
+                    <input type="text" name="name" id="name" maxlength="100" placeholder="Plz enter your last name" required /><br>
+                    <span class="icon"><img src="assets/images/u2.png"></span>
+
+                    <input type="tel" name="name" id="name" maxlength="100" placeholder="Plz enter yor phone No#" required /><br>
+                    <span class="ph icon"><img src="assets/images/ph2.png" ></span>
+
+                    <a class="btn btn-primary" href="#">Sign Up Now</a>
+                    <p>If You Have Alrady Account?<br><a href="#" data-toggle="modal" data-target="#modal1">Login Here</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-4" id="page-4">
+        <h1 class="mbr-section-title text-xs-center display-2" style="padding:100px 0 50px 0; color:white">The Recuriter Section Will Be Avaible Soon</h1>
+        <h1 class="mbr-section-title text-xs-center display-4" style="color:blue">Thank You</h1>
+    </div>
+
+    <div class="page-5" id="page-5">
+        <section class="mbr-footer mbr-section mbr-section-md-padding" id="contacts3-7" style="background-color: rgb(46, 46, 46); padding-top: 90px; padding-bottom: 90px;">
+
+
+            <div class="row">
+
+                <div class="mbr-company col-xs-12 col-md-6 col-lg-3">
+
+                    <div class="mbr-company card">
+                        <div><img src="assets/images/logo.png" class="card-img-top"></div>
+                        <div class="card-block">
+                            <p class="card-text">Footer with solid color background and a contact form, Easily add subscribe and contact forms without any server-side integration.</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <span class="list-group-icon"><span class="etl-icon icon-phone mbr-iconfont-company-contacts3"></span></span>
+                                <span class="list-group-text">+1 (0) 000 0000 001 or +1 (0) 000 0000 002</span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="list-group-icon"><span class="etl-icon icon-map-pin mbr-iconfont-company-contacts3"></span></span>
+                                <span class="list-group-text">1234 Street Name, City AA 99999</span>
+                            </li>
+                            <li class="list-group-item active">
+                                <span class="list-group-icon"><span class="etl-icon icon-envelope mbr-iconfont-company-contacts3"></span></span>
+                                <span class="list-group-text"><a href="mailto:zisagpgc@gmail.com">zisagpgc@gmail.com</a></span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="mbr-footer-content col-xs-12 col-md-6 col-lg-3">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a class="text-white" href="#">Business</a></li>
+                        <li><a class="text-white" href="#">Design</a></li>
+                        <li><a class="text-white" href="#">Real life</a></li>
+                        <li><a class="text-white" href="#">Science</a></li>
+                        <li><a class="text-white" href="#">Tech</a></li>
+                    </ul>
+                </div>
+                <div class="mbr-footer-content col-xs-12 col-md-6 col-lg-3">
+                    <p><strong>Contacts</strong>
+                        <br>Email: zisagpgc@gmail.com
+                        <br>Phone: +1 (0) 000 0000 001
+                        <br>Fax: +1 (0) 000 0000 002
+                        <br>
+                        <br>
+                        <br><strong>Address</strong>
+                        <br>1234 Street Name
+                        <br>City, AA 99999</p>
+                </div>
+                <div class="col-xs-12 col-md-6 col-lg-3" data-form-type="formoid">
+
+
+
+                    <form action="#" method="post">
+
+
+
+
+
+                        <div class="form-group">
+                            <label class="form-control-label" for="contacts3-7-email">Email<span class="form-asterisk">*</span></label>
+                            <input type="email" class="form-control input-sm input-inverse" name="email" required="" data-form-field="Email" id="contacts3-7-email">
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label class="form-control-label" for="contacts3-7-message">Message</label>
+                            <textarea class="form-control input-sm input-inverse" name="message" data-form-field="Message" rows="5" id="contacts3-7-message"></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-sm btn-black">Contact us</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+        <footer class="mbr-small-footer mbr-section mbr-section-nopadding" id="footer1-2" style="background-color: rgb(50, 50, 50); padding-top: 1.75rem; padding-bottom: 1.75rem;">
+
+            <div class="container">
+                <p class="text-xs-center">Copyright (c) 2016 Wx Developers.</p>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script src="assets/web/assets/jquery/jquery.min.js"></script>
+    <script src="assets/tether/tether.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/smooth-scroll/SmoothScroll.js"></script>
+    <script src="assets/viewportChecker/jquery.viewportchecker.js"></script>
+    <script src="assets/jarallax/jarallax.js"></script>
+    <script src="assets/dropdown/js/script.min.js"></script>
+    <script src="assets/touchSwipe/jquery.touchSwipe.min.js"></script>
+    <script src="assets/theme/js/script.js"></script>
+    <!-- [ TYPING SCRIPT ] -->
+    <script src="assets/javascript/typed.js"></script>
+
+
+    <!-- [ COMMON SCRIPT ] -->
+     <script>
+        $(document).ready(function() {
+
+            setTimeout(function() {
+                $('body').addClass('loaded');
+            }, 1000);
+
+        });
+    </script>
+
+    <script>
+        (function($) {
+            "use strict";
+            var App = {
+                init: function() {
+                    App.typing();
+
+                },
+
+                typing: function() {
+                    $(".main-element").each(function() {
+                        var $this = $(this);
+                        $this.typed({
+                            strings: $this.attr('data-elements').split(','),
+                            typeSpeed: 230, // typing speed
+                            backDelay: 3000 // pause before backspacing
+                        });
+                    });
+                },
+            }
+            App.init();
+
+        })(jQuery);
+    </script>
+
+
+    <input name="animation" type="hidden">
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon"></i></a></div>
+</body>
+
+</html>
